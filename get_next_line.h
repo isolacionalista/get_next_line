@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 13:10:22 by imendonc          #+#    #+#             */
-/*   Updated: 2022/12/07 14:49:06 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/12/07 15:05:57 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 
 //bibliotecas a incluir
 
-//fcntl - manipulate file description -- biblioteca para fopen
+/*fcntl - manipulate file description -- biblioteca para fopen
+que e utilizada na funcao principal
+*/
+
 # include <fcntl.h>
 # include <stdlib.h>
 # include <stdio.h>
@@ -28,6 +31,7 @@
 //funcoes pertencentes
 char		*get_next_line(int fd);
 char		*ft_strjoim(char *s1, char *s2);
+int			fake_bzero(char *buf);
 size_t		ft_strlen(char *str);
 
 #endif

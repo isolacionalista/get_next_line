@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 13:10:11 by imendonc          #+#    #+#             */
-/*   Updated: 2022/12/07 14:09:55 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/12/07 15:05:05 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,30 @@ char	*ft_strjoin(char *s1, char *s2)
 	str[b] = '\0';
 	free(s1);
 	return (str);
+}
+
+/*
+proxima funcao e parecida com o bezero,
+a medida que vai avancando numa linha, vai tranformando
+em 0
+*/
+
+int	fake_bzero(char *buf)
+{
+	int		a;
+	int		b;
+	char	*nl;
+
+	a = 0;
+	b = 0;
+	nl = 0;
+	while (buf[a])
+	{
+		if (nl)
+			buf[b++] = buf[a++];
+		if (buf[a] == '\n')
+			nl = 1;
+		buf[a++] = '\0';
+	}
+	return (nl);
 }
