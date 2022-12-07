@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 13:10:22 by imendonc          #+#    #+#             */
-/*   Updated: 2022/12/07 13:18:19 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/12/07 14:10:13 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@
 
 //funcoes pertencentes
 char		*get_next_line(int fd);
+char		*ft_strjoim(char *s1, char *s2);
+size_t		ft_strlen(char *str);
 
 #endif
