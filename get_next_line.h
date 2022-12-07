@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 13:10:22 by imendonc          #+#    #+#             */
-/*   Updated: 2022/12/07 15:05:57 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/12/07 15:49:20 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ que e utilizada na funcao principal
 
 //funcoes pertencentes
 char		*get_next_line(int fd);
-char		*ft_strjoim(char *s1, char *s2);
+char		*ft_strjoin(char *s1, char *s2);
 int			fake_bzero(char *buf);
 size_t		ft_strlen(char *str);
 

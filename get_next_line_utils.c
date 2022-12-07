@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 13:10:11 by imendonc          #+#    #+#             */
-/*   Updated: 2022/12/07 15:05:05 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/12/07 16:12:32 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ size_t	ft_strlen(char *str)
 
 	a = 0;
 	if (!str)
-		return (NULL);
+		return (0);
 	while (str[a] != '\n' && str[a])
 	{
 		a++;
 	}
-	return (a + (str == '\n'));
+	return (a + (str[a] == '\n'));
 }
 
 /*
@@ -52,9 +52,9 @@ char	*ft_strjoin(char *s1, char *s2)
 	str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!str)
 		return (NULL);
-	while (s1[a])
+	while (s1[a] && s1)
 		str[b++] = s1[a++];
-	b = 0;
+	a = 0;
 	while (s2[a] && s2 && s2[a] != '\n')
 		str[b++] = s2[a++];
 	if (s2[a] == '\n')
@@ -74,7 +74,7 @@ int	fake_bzero(char *buf)
 {
 	int		a;
 	int		b;
-	char	*nl;
+	int		nl;
 
 	a = 0;
 	b = 0;
@@ -82,7 +82,7 @@ int	fake_bzero(char *buf)
 	while (buf[a])
 	{
 		if (nl)
-			buf[b++] = buf[a++];
+			buf[b++] = buf[a];
 		if (buf[a] == '\n')
 			nl = 1;
 		buf[a++] = '\0';

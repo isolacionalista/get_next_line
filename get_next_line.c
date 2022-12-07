@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 13:10:16 by imendonc          #+#    #+#             */
-/*   Updated: 2022/12/07 15:32:42 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/12/07 16:07:04 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ char	*get_next_line(int fd)
 	{
 		str = ft_strjoin(str, b);
 		if (!str)
-			return NULL;
+			return (NULL);
 		if (fake_bzero(b) == 1)
-			break;
-		if (read(fd, b , 0) < 0)
+			break ;
+		if (read(fd, b, 0) < 0)
 		{
 			free(str);
 			return (NULL);
@@ -64,3 +64,24 @@ quando o ficheiro que a funcao read vai abrir for negativo
 ------------
 retorna str que dentro do loop foi definido como a juncao de *str e b[]
 */
+
+/* int main()
+{
+	char *line;
+	int		fd1;
+	fd1 = open("test.txt", O_RDONLY);
+	line = get_next_line(fd1);
+	printf("T1:%s", line);
+	free(line);
+	line = get_next_line(fd1);
+	printf("T1:%s", line);
+	free(line);
+		line = get_next_line(fd1);
+	printf("T1:%s", line);
+	free(line);
+	line = get_next_line(fd1);
+	printf("T1:%s", line);
+	free(line);
+}
+*/
+
