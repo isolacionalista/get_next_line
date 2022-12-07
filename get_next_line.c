@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 13:10:16 by imendonc          #+#    #+#             */
-/*   Updated: 2022/12/07 16:07:04 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/12/07 16:25:24 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,3 @@ retorna str que dentro do loop foi definido como a juncao de *str e b[]
 	free(line);
 }
 */
-

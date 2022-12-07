@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 13:10:11 by imendonc          #+#    #+#             */
-/*   Updated: 2022/12/07 16:12:32 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/12/07 16:24:28 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ size_t	ft_strlen(char *str)
 {
 	size_t	a;
 
-	a = 0;
 	if (!str)
 		return (0);
+	a = 0;
 	while (str[a] != '\n' && str[a])
 	{
 		a++;
@@ -47,15 +47,15 @@ char	*ft_strjoin(char *s1, char *s2)
 	size_t	b;
 	char	*str;
 
-	a = 0;
-	b = 0;
 	str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!str)
 		return (NULL);
-	while (s1[a] && s1)
+	a = 0;
+	b = 0;
+	while (s1 && s1[a])
 		str[b++] = s1[a++];
 	a = 0;
-	while (s2[a] && s2 && s2[a] != '\n')
+	while (s2 && s2[a] && s2[a] != '\n')
 		str[b++] = s2[a++];
 	if (s2[a] == '\n')
 		str[b++] = '\n';
