@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 13:10:22 by imendonc          #+#    #+#             */
-/*   Updated: 2022/12/07 14:10:13 by imendonc         ###   ########.fr       */
+/*   Updated: 2022/12/07 14:49:06 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 //bibliotecas a incluir
 
-//fcntl - manipulate file description
+//fcntl - manipulate file description -- biblioteca para fopen
 # include <fcntl.h>
 # include <stdlib.h>
 # include <stdio.h>
