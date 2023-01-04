@@ -6,7 +6,7 @@
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 13:10:16 by imendonc          #+#    #+#             */
-/*   Updated: 2022/12/07 16:39:16 by imendonc         ###   ########.fr       */
+/*   Updated: 2023/01/04 13:13:48 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,22 +65,22 @@ quando o ficheiro que a funcao read vai abrir for negativo
 retorna str que dentro do loop foi definido como a juncao de *str e b[]
 */
 
-/* int main()
+/*int main()
 {
 	char *line;
 	int		fd1;
 	fd1 = open("test.txt", O_RDONLY);
 	line = get_next_line(fd1);
-	printf("T1:%s", line);
+	printf("%s", line);
 	free(line);
 	line = get_next_line(fd1);
-	printf("T1:%s", line);
+	printf("%s", line);
 	free(line);
 		line = get_next_line(fd1);
-	printf("T1:%s", line);
+	printf("%s", line);
 	free(line);
 	line = get_next_line(fd1);
-	printf("T1:%s", line);
+	printf("%s", line);
 	free(line);
 }
 */

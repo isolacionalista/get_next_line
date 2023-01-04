@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/07 16:31:07 by imendonc          #+#    #+#             */
-/*   Updated: 2022/12/07 17:03:08 by imendonc         ###   ########.fr       */
+/*   Created: 2023/01/04 13:02:43 by imendonc          #+#    #+#             */
+/*   Updated: 2023/01/04 13:25:38 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,47 +14,52 @@
 
 char	*get_next_line(int fd)
 {
-	static char		b[BUFFER_SIZE + 1];
+	static char		b[FOPEN_MAX][BUFFER_SIZE + 1];
 	char			*str;
 
 	str = NULL;
 	if (fd < 0 || fd > FOPEN_MAX)
 		return (NULL);
-	if (!b[0])
-		b[read(fd, b, BUFFER_SIZE)] = 0;
-	while (b[0])
+	if (!b[fd][0])
+		b[fd][read(fd, b[fd], BUFFER_SIZE)] = 0;
+	while (b[fd][0])
 	{
-		str = ft_strjoin(str, b);
+		str = ft_strjoin(str, b[fd]);
 		if (!str)
 			return (NULL);
-		if (fake_bzero(b) == 1)
+		if (fake_bzero(b[fd]))
 			break ;
-		if (read(fd, b, 0) < 0)
+		if (read(fd, 0, 0) < 0)
 		{
 			free(str);
 			return (NULL);
 		}
-		b[read(fd, b, BUFFER_SIZE)] = 0;
+		b[fd][read(fd, b[fd], BUFFER_SIZE)] = 0;
 	}
 	return (str);
 }
 
-/* int main()
+int main()
 {
 	char *line;
-	int		fd1;
+	char *line2;
+	char *line3;
+	int fd1;
+	int fd2;
+	int fd3;
+
 	fd1 = open("test.txt", O_RDONLY);
+	fd2 = open("test2.txt", O_RDONLY);
+	fd3 = open("test3.txt", O_RDONLY);
 	line = get_next_line(fd1);
-	printf("T1:%s", line);
+	line2 = get_next_line(fd2);
+	line3 = get_next_line(fd3);
+
+	printf("%s", line);
+	printf("%s", line2);
+	printf("%s", line3);
+
 	free(line);
-	line = get_next_line(fd1);
-	printf("T1:%s", line);
-	free(line);
-		line = get_next_line(fd1);
-	printf("T1:%s", line);
-	free(line);
-	line = get_next_line(fd1);
-	printf("T1:%s", line);
-	free(line);
+	free(line2);
+	free(line3);
 }
-*/

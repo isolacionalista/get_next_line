@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: imendonc <imendonc@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/07 16:29:45 by imendonc          #+#    #+#             */
-/*   Updated: 2022/12/07 17:03:05 by imendonc         ###   ########.fr       */
+/*   Created: 2023/01/04 13:00:54 by imendonc          #+#    #+#             */
+/*   Updated: 2023/01/04 13:02:07 by imendonc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
-# include <limits.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 50
